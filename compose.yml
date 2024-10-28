@@ -1,0 +1,10 @@
+version: 3.9
+
+services:
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: ecs-employeedashboard-db
+    ports:
+      - "1433:1433"
+  builder:
+    image: 
