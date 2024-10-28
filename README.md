@@ -35,13 +35,16 @@ The Powershell script:
 2. Builds the .sqlproj into a DACPAC file via the build container
 3. Deploys the DACPAC file onto the SQL Server container, also via the build container.
 
-# How to Run
+# Instructions
+### Running The Script
 To make sure that no chicanery happens during the script deployment, run `docker pull mcr.microsoft.com/mssql/server:2022-latest` to download the server image. Additionally, make sure no container/process is using the 1433 port
 
 Afterwards, simply run `StartLocalContainer.ps1` in Powershell.
 
+### Connecting to SQL Server
 To verify that the SQL Server was correctly deployed, go to `localhost:1433` in SSMS or Azure Data Studio.
-User: `sa`
-Pass: `ECSd@shb0ard`
+
+- User: `sa`
+- Pass: `ECSd@shb0ard`
 
 With just the TestTable.sql file, the table should show under `System Databases > master > dbo`
