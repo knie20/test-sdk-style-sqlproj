@@ -10,4 +10,16 @@
   <Target Name="BeforeBuild">
     <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
   </Target>
+
+  <!-- <ItemGroup>
+    <Build Include="Tables/Tables.sql" />
+  </ItemGroup> -->
+
+  <ItemGroup>
+    <PreDeploy Include="predeploy.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PostDeploy Include="postdeploy.sql" />
+  </ItemGroup>
 </Project>
