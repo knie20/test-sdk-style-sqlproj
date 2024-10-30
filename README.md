@@ -48,3 +48,21 @@ To verify that the SQL Server was correctly deployed, go to `localhost:1433` in 
 - Pass: `ECSd@shb0ard`
 
 With just the TestTable.sql file, the table should show under `System Databases > master > dbo`
+
+
+# Tooling
+### Visual Studio
+Starting with VS 17.12.x (VS 2022), the [SQL Server Data Tools, SDK-style](https://learn.microsoft.com/en-us/sql/ssdt/sql-server-data-tools-sdk-style?view=sql-server-ver16) becomes available to install.
+
+With classic Visual Studio, opening a sdk-style sqlproj would add an .sln to the file system and the sql scripts won't show unless explicitly added in the sqlproj file.
+
+# Limitations
+[Here](https://learn.microsoft.com/en-us/sql/tools/sql-database-projects/sql-projects-tools?view=sql-server-ver16) is a MS docs article that compares SQL Project Tools for functionalities
+
+Notable limitations:
+- No Project/DacPac Reference Support
+
+# References
+- Overview For SQL Server Data Tools, SDK-style: https://learn.microsoft.com/en-us/sql/ssdt/sql-server-data-tools-sdk-style?view=sql-server-ver16
+- Overview for SDK-Style SQL projects: https://learn.microsoft.com/en-us/azure-data-studio/extensions/sql-database-project-extension-sdk-style-projects
+- Microsoft's DacFx repository, which includes SqlPackage and Microsoft.Build.Sql, on Github: https://github.com/microsoft/dacfx
