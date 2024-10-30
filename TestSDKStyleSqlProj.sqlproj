@@ -12,7 +12,7 @@
   </Target>
 
   <ItemGroup>
-    <Build Include="" />
+    <Build Include="Tables/Tables.sql" />
   </ItemGroup>
 
   <ItemGroup>

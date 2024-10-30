@@ -4,6 +4,8 @@ SELECT
     I.InvoiceID, I.InvoiceDate, I.TotalAmount, I.Status, 
     C.Name AS CustomerName, C.Email AS CustomerEmail
 FROM 
-    Invoice I
+    [Kaidong].[Invoice] I
 JOIN 
-    Customer C ON I.CustomerID = C.CustomerID;
+    [Kaidong].[Customer] C ON I.CustomerID = C.CustomerID;
+    
+GO
